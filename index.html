@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BSINFOTECH 1B ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, pink, skyblue,red);
+    color: skyblue;
+}
+
+/* HOME */
+
+.home {
+    min-height: 100vh;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.title {
+    font-size: 42px;
+    color: #d92f59;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.subtitle {
+    color: #8b6973;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+/* BUTTON GRID */
+
+.menu {
+    max-width: 600px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.menu-box {
+    background: rgba(255,255,255,0.9);
+
+    border: 2px solid #f1a7b8;
+    border-radius: 20px;
+
+    height: 190px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(200,70,100,0.15);
+
+    transition: 0.3s;
+}
+
+.menu-box:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(200,70,100,0.25);
+}
+
+.icon {
+    font-size: 65px;
+    margin-bottom: 10px;
+}
+
+.menu-box h2 {
+    color: #d92f59;
+    font-size: 22px;
+}
+
+.menu-box p {
+    color: #8b6973;
+    margin-top: 5px;
+}
+
+/* SECTIONS */
+
+.section {
+    display: none;
+
+    min-height: 100vh;
+
+    padding: 30px 20px;
+
+    text-align: center;
+}
+
+.section.active {
+    display: block;
+}
+
+.back {
+    border: none;
+
+    background: #d92f59;
+    color: white;
+
+    padding: 11px 22px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    margin-bottom: 25px;
+}
+
+.section-title {
+    color: #d92f59;
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+/* GALLERY */
+
+.gallery {
+    max-width: 900px;
+
+    margin: 25px auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.photo {
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    border: 3px solid white;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.photo:hover {
+    transform: scale(1.04);
+}
+
+/* MESSAGE */
+
+.message {
+    max-width: 700px;
+
+    margin: 30px auto;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(200,70,100,0.15);
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+/* MUSIC */
+
+.music-box {
+    max-width: 600px;
+
+    margin: 30px auto;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(200,70,100,0.15);
+}
+
+audio {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* VIDEO */
+
+.video-box {
+    max-width: 700px;
+
+    margin: 30px auto;
+}
+
+video {
+    width: 100%;
+
+    border-radius: 20px;
+}
+
+/* IMAGE POPUP */
+
+.popup {
+    display: none;
+
+    position: fixed;
+
+    z-index: 999;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.9);
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.popup img {
+    max-width: 95%;
+    max-height: 90%;
+
+    border-radius: 15px;
+}
+
+.close {
+    position: absolute;
+
+    top: 20px;
+    right: 30px;
+
+    color: white;
+
+    font-size: 40px;
+
+    cursor: pointer;
+}
+
+/* MOBILE */
+
+@media(max-width:600px) {
+
+    .title {
+        font-size: 32px;
+    }
+
+    .menu {
+        gap: 12px;
+    }
+
+    .menu-box {
+        height: 160px;
+    }
+
+    .icon {
+        font-size: 50px;
+    }
+
+    .menu-box h2 {
+        font-size: 18px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ========================= -->
+<!-- HOME -->
+<!-- ========================= -->
+
+<div id="home" class="home">
+
+    <h1 class="title">
+        1B Memories ❤️
+    </h1>
+
+    <p class="subtitle">
+        I hope you like them 💗
+    </p>
+
+
+    <div class="menu">
+
+        <!-- PICTURES -->
+
+        <div class="menu-box" onclick="openPage('pictures')">
+
+            <div class="icon">
+                🖼️
+            </div>
+
+            <h2>
+               Picksur natin
+            </h2>
+
+            <p>
+                Mga Bai 📸
+            </p>
+
+        </div>
+
+
+        <!-- MUSIC -->
+
+        <div class="menu-box" onclick="openPage('music')">
+
+            <div class="icon">
+                🎵
+            </div>
+
+            <h2>
+                Music
+            </h2>
+
+            <p>
+               para di naman bored 🎵
+            </p>
+
+        </div>
+
+
+        <!-- MESSAGE -->
+
+        <div class="menu-box" onclick="openPage('message')">
+
+            <div class="icon">
+                🥹💌
+            </div>
+
+            <h2>
+                Message
+            </h2>
+
+            <p>
+                wag kayo maiiyak ha 💗
+            </p>
+
+        </div>
+
+
+        <!-- VIDEO -->
+
+        <div class="menu-box" onclick="openPage('video')">
+
+            <div class="icon">
+                🫠🥹
+            </div>
+
+            <h2>
+                Surprise
+            </h2>
+
+            <p>
+               panoorin nyo kagagohan nyo ❤️
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ========================= -->
+<!-- PICTURES -->
+<!-- ========================= -->
+
+<div id="pictures" class="section">
+
+    <button class="back" onclick="goHome()">
+        ← Back
+    </button>
+
+    <h1 class="section-title">
+        Picture natin kingina nyo📸
+    </h1>
+
+    <p class="subtitle">
+        In loving memory.HAHA❤️
+    </p>
+
+
+    <div class="gallery">
+
+        <img
+            src="pic.jpg"
+            class="photo"
+            onclick="showPhoto(this.src)"
+        >
+
+        <img
+            src="pic1.jpg"
+            class="photo"
+            onclick="showPhoto(this.src)"
+        >
+
+        <img
+            src="pic10.jpg"
+            class="photo"
+            onclick="showPhoto(this.src)"
+        >
+
+        <img
+            src="pic11.jpg"
+            class="photo"
+            onclick="showPhoto(this.src)"
+        >
+
+        <img
+            src="pic12.jpg"
+            class="photo"
+            onclick="showPhoto(this.src)"
+        >
+
+        <img
+            src="pic3.jpg"
+            class="photo"
+            onclick="showPhoto(this.src)"
+        >
+
+        <img
+            src="pic4.jpg"
+            class="photo"
+            onclick="showPhoto(this.src)"
+        >
+
+        <img
+            src="pic5.jpg"
+            class="photo"
+            onclick="showPhoto(this.src)"
+        >
+
+        <img
+            src="pic6.jpg"
+            class="photo"
+            onclick="showPhoto(this.src)"
+        >
+
+        <img
+            src="pic7.jpg"
+            class="photo"
+            onclick="showPhoto(this.src)"
+        >
+
+        <img
+            src="pic8.jpg"
+            class="photo"
+            onclick="showPhoto(this.src)"
+        >
+
+        <img
+            src="pic9.jpg"
+            class="photo"
+            onclick="showPhoto(this.src)"
+        >
+
+    </div>
+
+</div>
+
+
+
+<!-- ========================= -->
+<!-- MUSIC -->
+<!-- ========================= -->
+
+<div id="music" class="section">
+
+    <button class="back" onclick="goHome()">
+        ← Back
+    </button>
+
+    <h1 class="section-title">
+        A Song For You 🎵
+    </h1>
+
+    <div class="music-box">
+
+        <h2>
+           WALA LANG PARA MAANGAS LANG
+        </h2>
+
+        <audio controls>
+
+            <source
+                src="song1.mp4"
+                type="audio/mpeg"
+            >
+
+        </audio>
+
+    </div>
+
+</div>
+
+
+
+<!-- ========================= -->
+<!-- MESSAGE -->
+<!-- ========================= -->
+
+<div id="message" class="section">
+
+    <button class="back" onclick="goHome()">
+        ← Back
+    </button>
+
+    <h1 class="section-title">
+        A Message For You 💌
+    </h1>
+
+
+    <div class="message">
+
+        <p>
+
+           Hello mga gago
+
+            <br><br>
+
+         wala lang mema lang
+
+            <br><br>
+
+           drop out na tayo lahat guys
+
+            <br><br>
+         kaya pa ba
+
+            <br><br>
+
+           hello ulit🥳
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- ========================= -->
+<!-- VIDEO -->
+<!-- ========================= -->
+
+<div id="video" class="section">
+
+    <button class="back" onclick="goHome()">
+        ← Back
+    </button>
+
+    <h1 class="section-title">
+        Your Surprise 🎬
+    </h1>
+
+    <div class="video-box">
+
+        <video controls>
+
+            <source
+                src="vid1.mp4"
+                type="video/mp4"
+            >
+
+        </video>
+
+    </div>
+
+</div>
+
+
+
+<!-- ========================= -->
+<!-- IMAGE POPUP -->
+<!-- ========================= -->
+
+<div id="popup" class="popup">
+
+    <span
+        class="close"
+        onclick="closePhoto()"
+    >
+        ×
+    </span>
+
+    <img
+        id="popupImage"
+        src=""
+    >
+
+</div>
+
+
+
+<script>
+
+/* OPEN PAGE */
+
+function openPage(page) {
+
+    document.getElementById("home").style.display = "none";
+
+    document.querySelectorAll(".section").forEach(function(section) {
+
+        section.classList.remove("active");
+
+    });
+
+    document.getElementById(page).classList.add("active");
+
+    window.scrollTo(0, 0);
+}
+
+
+/* GO HOME */
+
+function goHome() {
+
+    document.querySelectorAll(".section").forEach(function(section) {
+
+        section.classList.remove("active");
+
+    });
+
+    document.getElementById("home").style.display = "block";
+
+    window.scrollTo(0, 0);
+}
+
+
+/* OPEN PHOTO */
+
+function showPhoto(src) {
+
+    document.getElementById("popupImage").src = src;
+
+    document.getElementById("popup").style.display = "flex";
+}
+
+
+/* CLOSE PHOTO */
+
+function closePhoto() {
+
+    document.getElementById("popup").style.display = "none";
+}
+
+
+/* CLOSE WHEN CLICKING OUTSIDE IMAGE */
+
+document.getElementById("popup").addEventListener("click", function(event) {
+
+    if(event.target === this) {
+
+        closePhoto();
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
